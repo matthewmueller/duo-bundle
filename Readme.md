@@ -1,5 +1,5 @@
 
-# duo-middleware
+# duo-bundle
 
   Personal duo build and middleware.
 
