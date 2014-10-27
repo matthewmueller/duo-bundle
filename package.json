@@ -9,7 +9,7 @@
     "url": "git://github.com/MatthewMueller/duo-bundle.git"
   },
   "bin": {
-    "duo-bundle": "duo-bundle"
+    "duo-bundle": "bin/duo-bundle"
   },
   "dependencies": {
     "better-batch": "0.0.4",

@@ -17,9 +17,32 @@
 
 ## Example
 
-```js
+Build from the CLI:
 
+```bash
+NODE_ENV=production DEBUG=duo* ./node_modules/.bin/duo-bundle *.js *.css
 ```
+
+Build from koa middleware:
+
+```js
+var bundle = require('duo-bundle')(__dirname);
+
+// glob home.js, home.css
+router.get('/', bundle('home.{css,js}'), function *() {
+
+});
+```
+
+## API
+
+### Bundle(root)
+
+Create a `bundle` with the given `root` used in duo.
+
+### bundle(glob)
+
+Add all `glob` files as entries to duo. Returns a generator function for koa.
 
 ## TODO
 
