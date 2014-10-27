@@ -14,6 +14,7 @@
   - Uses `myth`
   - JS & CSS Minification in production
   - `$ duo bundle` CLI command for production
+  - Supports `var tpl = require('./template.jade')`
 
 ## Example
 
