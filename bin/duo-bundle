@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+/**
+ * Modules
+ */
+
+var bundle = require('../lib/build.js');
+var root = process.cwd();
+
+/**
+ * Files
+ */
+
+var files = process.argv.slice(2);
+
+/**
+ * Bundle Javascript and CSS
+ */
+
+bundle(root, files, function(err) {
+  if (err) throw err;
+  console.log('bundled');
+});
