@@ -4,7 +4,7 @@
  * Modules
  */
 
-var bundle = require('../lib/build.js');
+var bundle = require('../lib/bundle.js');
 var root = process.cwd();
 
 /**

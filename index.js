@@ -26,7 +26,7 @@ var production = 'production' == process.env.NODE_ENV;
 function middleware(root) {
   return function(glob) {
     return function *(next) {
-      if (!production) yield build(root, glob);
+      if (!production) yield bundle(root, glob);
       yield next;
     }
   }
