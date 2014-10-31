@@ -1,23 +1,30 @@
 #!/usr/bin/env node
 
 /**
- * Modules
+ * Module dependencies.
  */
 
-var bundle = require('../lib/bundle.js');
-var root = process.cwd();
+var path = require('path');
+var spawn = require('win-fork');
 
 /**
- * Files
+ * Resolve.
  */
 
-var files = process.argv.slice(2);
+var gnode = require.resolve('gnode/bin/gnode');
+var duo = path.resolve(__dirname, '_duo-bundle');
+var args = [duo].concat(process.argv.slice(2));
 
 /**
- * Bundle Javascript and CSS
+ * Spawn.
  */
 
-bundle(root, files, function(err) {
-  if (err) throw err;
-  console.log('bundled');
+var proc = spawn(gnode, args, { stdio: 'inherit' });
+
+/**
+ * Exit.
+ */
+
+proc.on('exit', function (code) {
+  process.exit(code);
 });
