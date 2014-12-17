@@ -12,6 +12,7 @@
     "duo-bundle": "bin/duo-bundle"
   },
   "dependencies": {
+    "batch": "^0.5.1",
     "better-batch": "0.0.4",
     "co": "^3.1.0",
     "debug": "^2.1.0",
