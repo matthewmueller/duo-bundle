@@ -19,6 +19,5 @@ var files = process.argv.slice(2);
 
 bundle(root, files, function(err) {
   if (err) throw err;
-  console.log('bundled');
 });
 
