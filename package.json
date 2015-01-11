@@ -1,6 +1,6 @@
 {
   "name": "duo-bundle",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "personal duo builder and middleware",
   "keywords": [],
   "author": "Matthew Mueller <mattmuelle@gmail.com>",
